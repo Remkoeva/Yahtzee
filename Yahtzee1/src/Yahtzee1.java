@@ -437,7 +437,7 @@ public class Yahtzee1 extends javax.swing.JFrame {
 
         fds.setText("Three of a kind");
         getContentPane().add(fds);
-        fds.setBounds(409, 170, 100, 14);
+        fds.setBounds(409, 170, 80, 14);
 
         asdf.setText("Carré");
         getContentPane().add(asdf);
@@ -465,19 +465,19 @@ public class Yahtzee1 extends javax.swing.JFrame {
 
         three1.setText("0");
         getContentPane().add(three1);
-        three1.setBounds(491, 170, 10, 14);
+        three1.setBounds(491, 170, 50, 14);
 
         three2.setText("0");
         getContentPane().add(three2);
-        three2.setBounds(710, 170, 10, 14);
+        three2.setBounds(710, 170, 40, 14);
 
         carre1.setText("0");
         getContentPane().add(carre1);
-        carre1.setBounds(491, 210, 10, 14);
+        carre1.setBounds(491, 210, 50, 14);
 
         carre2.setText("0");
         getContentPane().add(carre2);
-        carre2.setBounds(710, 210, 10, 14);
+        carre2.setBounds(710, 210, 40, 14);
 
         full2.setText("0");
         getContentPane().add(full2);
@@ -485,39 +485,39 @@ public class Yahtzee1 extends javax.swing.JFrame {
 
         full1.setText("0");
         getContentPane().add(full1);
-        full1.setBounds(491, 250, 10, 14);
+        full1.setBounds(491, 250, 100, 14);
 
         kleine2.setText("0");
         getContentPane().add(kleine2);
-        kleine2.setBounds(710, 290, 10, 14);
+        kleine2.setBounds(710, 290, 50, 14);
 
         kleine1.setText("0");
         getContentPane().add(kleine1);
-        kleine1.setBounds(491, 290, 10, 14);
+        kleine1.setBounds(491, 290, 60, 14);
 
         grote2.setText("0");
         getContentPane().add(grote2);
-        grote2.setBounds(710, 330, 10, 14);
+        grote2.setBounds(710, 330, 40, 14);
 
         grote1.setText("0");
         getContentPane().add(grote1);
-        grote1.setBounds(491, 330, 10, 14);
+        grote1.setBounds(491, 330, 60, 14);
 
         topscore2.setText("0");
         getContentPane().add(topscore2);
-        topscore2.setBounds(710, 370, 10, 14);
+        topscore2.setBounds(710, 370, 40, 14);
 
         topscore1.setText("0");
         getContentPane().add(topscore1);
-        topscore1.setBounds(491, 370, 10, 14);
+        topscore1.setBounds(491, 370, 70, 14);
 
         chance2.setText("0");
         getContentPane().add(chance2);
-        chance2.setBounds(710, 410, 10, 14);
+        chance2.setBounds(710, 410, 60, 14);
 
         chance1.setText("0");
         getContentPane().add(chance1);
-        chance1.setBounds(491, 410, 10, 14);
+        chance1.setBounds(491, 410, 70, 14);
 
         threeKnop1.setText("Kies");
         threeKnop1.addActionListener(new java.awt.event.ActionListener() {
@@ -781,7 +781,26 @@ public class Yahtzee1 extends javax.swing.JFrame {
         beurt = 2;
         beurtTekst.setText("Speler 2");        
     }
-
+    private void resetDobbelsteen(){
+        dobbel1 = 0;
+        dobbel2 = 0;
+        dobbel3 = 0;
+        dobbel4 = 0;
+        dobbel5 = 0;
+                
+        dobbelVak1.setText(String.valueOf(dobbel1));
+        dobbelVak2.setText(String.valueOf(dobbel2));
+        dobbelVak3.setText(String.valueOf(dobbel3));
+        dobbelVak4.setText(String.valueOf(dobbel4));
+        dobbelVak5.setText(String.valueOf(dobbel5));
+        
+        dobbelsteen1.setSelected(true);
+        dobbelsteen2.setSelected(true);
+        dobbelsteen3.setSelected(true);
+        dobbelsteen4.setSelected(true);
+        dobbelsteen5.setSelected(true);
+             
+    }
     
     private void dobbelKnopAlleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dobbelKnopAlleActionPerformed
         // alle dobbelstenen werken 
@@ -836,6 +855,7 @@ public class Yahtzee1 extends javax.swing.JFrame {
             enen1.hide();
             beurt2Actie();
             gooienActie();
+            resetDobbelsteen();
             
         }
     }//GEN-LAST:event_enen1ActionPerformed
@@ -863,6 +883,7 @@ public class Yahtzee1 extends javax.swing.JFrame {
             scoreTweeen1.setText(String.valueOf(punten));
             beurt2Actie();
             gooienActie();
+            resetDobbelsteen();
             
         }
     }//GEN-LAST:event_tweeen1ActionPerformed
@@ -890,7 +911,7 @@ public class Yahtzee1 extends javax.swing.JFrame {
             scoreDrieen2.setText(String.valueOf(punten));
             gooienActie();
             beurt1Actie();
-            
+            resetDobbelsteen();
         }
     }//GEN-LAST:event_drieen2ActionPerformed
 
@@ -917,6 +938,7 @@ public class Yahtzee1 extends javax.swing.JFrame {
             scoreDrieen1.setText(String.valueOf(punten));                
             gooienActie(); 
             beurt2Actie();
+            resetDobbelsteen();
             
         }
     }//GEN-LAST:event_drieen1ActionPerformed
@@ -944,7 +966,7 @@ public class Yahtzee1 extends javax.swing.JFrame {
             scoreVieren1.setText(String.valueOf(punten));
             gooienActie();
             beurt2Actie();
-            
+            resetDobbelsteen();
         }
     }//GEN-LAST:event_vieren1ActionPerformed
 
@@ -971,7 +993,7 @@ public class Yahtzee1 extends javax.swing.JFrame {
             scoreVijven1.setText(String.valueOf(punten));
             gooienActie();
             beurt2Actie();
-            
+            resetDobbelsteen();
         }
     }//GEN-LAST:event_vijven1ActionPerformed
 
@@ -998,6 +1020,7 @@ public class Yahtzee1 extends javax.swing.JFrame {
             scoreZessen1.setText(String.valueOf(punten));
             gooienActie();
             beurt2Actie();
+            resetDobbelsteen();
             
         }
     }//GEN-LAST:event_zessen1ActionPerformed
@@ -1025,7 +1048,7 @@ public class Yahtzee1 extends javax.swing.JFrame {
             scoreEnen2.setText(String.valueOf(punten));
             gooienActie();
             beurt1Actie();
-            
+            resetDobbelsteen();
         }
     }//GEN-LAST:event_enen2ActionPerformed
 
@@ -1052,7 +1075,7 @@ public class Yahtzee1 extends javax.swing.JFrame {
             scoreTweeen2.setText(String.valueOf(punten));
             gooienActie();
             beurt1Actie();
-            
+            resetDobbelsteen();
         }
     }//GEN-LAST:event_tweeen2ActionPerformed
 
@@ -1079,7 +1102,7 @@ public class Yahtzee1 extends javax.swing.JFrame {
             scoreVieren2.setText(String.valueOf(punten));
             gooienActie();
             beurt1Actie();
-            
+            resetDobbelsteen();
         }
     }//GEN-LAST:event_vieren2ActionPerformed
 
@@ -1106,7 +1129,7 @@ public class Yahtzee1 extends javax.swing.JFrame {
             scoreVijven2.setText(String.valueOf(punten));
             gooienActie();
             beurt1Actie();
-            
+            resetDobbelsteen();
         }
     }//GEN-LAST:event_vijven2ActionPerformed
 
@@ -1133,7 +1156,7 @@ public class Yahtzee1 extends javax.swing.JFrame {
            scoreZessen2.setText(String.valueOf(punten));
            gooienActie();
            beurt1Actie();
-           
+           resetDobbelsteen();
         }
     }//GEN-LAST:event_zessen2ActionPerformed
 
@@ -1204,7 +1227,7 @@ public class Yahtzee1 extends javax.swing.JFrame {
             threeKnop1.hide();
             gooienActie();
             beurt2Actie();
-            
+            resetDobbelsteen();
         }
     }//GEN-LAST:event_threeKnop1ActionPerformed
 
@@ -1231,7 +1254,7 @@ public class Yahtzee1 extends javax.swing.JFrame {
             carreKnop1.hide();
             gooienActie();        
             beurt2Actie();
-            
+            resetDobbelsteen();
         }
     }//GEN-LAST:event_carreKnop1ActionPerformed
 
@@ -1271,7 +1294,7 @@ public class Yahtzee1 extends javax.swing.JFrame {
             fullKnop1.hide();  
             gooienActie();
             beurt2Actie();
-            
+            resetDobbelsteen();
         }
     }//GEN-LAST:event_fullKnop1ActionPerformed
 
@@ -1326,7 +1349,7 @@ public class Yahtzee1 extends javax.swing.JFrame {
             kleineKnop1.hide();
             gooienActie();       
             beurt2Actie();
-            
+            resetDobbelsteen();
         }
     }//GEN-LAST:event_kleineKnop1ActionPerformed
 
@@ -1342,7 +1365,7 @@ public class Yahtzee1 extends javax.swing.JFrame {
             groteKnop1.hide();
             gooienActie();
             beurt2Actie();
-            resetDobbel();
+            resetDobbelsteen();
         }
     }//GEN-LAST:event_groteKnop1ActionPerformed
 
@@ -1355,7 +1378,7 @@ public class Yahtzee1 extends javax.swing.JFrame {
             topscoreKnop1.hide();
             gooienActie();
             beurt2Actie();
-            
+            resetDobbelsteen();
         }
     }//GEN-LAST:event_topscoreKnop1ActionPerformed
 
@@ -1368,20 +1391,20 @@ public class Yahtzee1 extends javax.swing.JFrame {
             chanceKnop1.hide();
             gooienActie();
             beurt2Actie();
-            
+            resetDobbelsteen();
         }
     }//GEN-LAST:event_chanceKnop1ActionPerformed
 
     private void chanceKnop2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chanceKnop2ActionPerformed
-        // telt de score van chance van speler 1 op
-        if (beurt == 1){
+        // telt de score van chance van speler 2 op
+        if (beurt == 2){
             punten = 0;
             punten = dobbel1 + dobbel2 + dobbel3 + dobbel4 + dobbel5;
             chance2.setText(String.valueOf(punten));
             chanceKnop2.hide();
             gooienActie();
             beurt2Actie();
-            
+            resetDobbelsteen();
         }
     }//GEN-LAST:event_chanceKnop2ActionPerformed
 
@@ -1394,7 +1417,7 @@ public class Yahtzee1 extends javax.swing.JFrame {
             topscoreKnop2.hide();
             gooienActie();
             beurt1Actie();
-            
+            resetDobbelsteen();
         }
     }//GEN-LAST:event_topscoreKnop2ActionPerformed
 
@@ -1402,15 +1425,15 @@ public class Yahtzee1 extends javax.swing.JFrame {
         // telt de score van grote straat van speler 2 op
         if (beurt == 2){
             if (dobbel1 * dobbel2 * dobbel3 * dobbel4 * dobbel5 == 120){
-                grote1.setText("40");
+                grote2.setText("40");
             }
             if (dobbel1 * dobbel2 * dobbel3 * dobbel4 * dobbel5 == 720){
-                grote1.setText("40");
+                grote2.setText("40");
             }
-            groteKnop1.hide();
+            groteKnop2.hide();
             gooienActie();
             beurt1Actie();
-            
+            resetDobbelsteen();
         }
     }//GEN-LAST:event_groteKnop2ActionPerformed
 
@@ -1466,7 +1489,7 @@ public class Yahtzee1 extends javax.swing.JFrame {
             kleineKnop2.hide();
             gooienActie();
             beurt1Actie();
-            
+            resetDobbelsteen();
         }
     }//GEN-LAST:event_kleineKnop2ActionPerformed
 
@@ -1494,7 +1517,7 @@ public class Yahtzee1 extends javax.swing.JFrame {
             carreKnop2.hide();
             gooienActie();
             beurt1Actie();
-            
+            resetDobbelsteen();
         }
     }//GEN-LAST:event_carreKnop2ActionPerformed
 
@@ -1534,7 +1557,7 @@ public class Yahtzee1 extends javax.swing.JFrame {
             fullKnop2.hide();
             gooienActie();
             beurt1Actie();
-            
+            resetDobbelsteen();
         }
     }//GEN-LAST:event_fullKnop2ActionPerformed
 
@@ -1576,7 +1599,7 @@ public class Yahtzee1 extends javax.swing.JFrame {
             threeKnop2.hide();
             gooienActie();
             beurt1Actie();
-            
+            resetDobbelsteen();
         }
     }//GEN-LAST:event_threeKnop2ActionPerformed
 
